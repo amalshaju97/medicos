@@ -1,0 +1,21 @@
+{
+    "dir": "ltr",
+    "lang": "en",
+    "name": "Medicos",
+    "scope": "/",
+    "display": "standalone",
+    "start_url": "index.html",
+    "short_name": "Medicos",
+    "theme_color": "#007bff",
+    "description": "",
+    "orientation": "portrait",
+    "background_color": "#fafafa",
+    "gcm_sender_id": "103953800507",
+    "related_applications": [],
+    "prefer_related_applications": false,
+    "icons": [{
+        "src": "favicon.png",
+        "sizes": "250x250",
+        "type": "image/png"
+    }]
+}

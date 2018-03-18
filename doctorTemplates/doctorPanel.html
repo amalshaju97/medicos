@@ -1,0 +1,63 @@
+<div class="navbar-fixed">
+    <nav style="background:#3F51B5">
+        <div class="nav-wrapper" style="padding-left: 1rem;padding-right: 1rem;">
+            <a href="#!" class="brand-logo" style="font-size:22px;">Medicos</a>
+            <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+            <ul class="right hide-on-med-and-down">
+                <li class="active"><a href="#/DPanel"><i class="material-icons left">insert_drive_file</i>My Profile</a></li>
+                <li><a href="#/docDB"><i class="material-icons left">work</i>Timeline</a></li>
+                <li><a href="#/docNew"><i class="material-icons left">track_changes</i>Add Records</a></li>
+                <li><a href="#/docPatient"><i class="material-icons left">euro_symbol</i>My Patients</a></li>
+            </ul>
+            <ul class="side-nav" id="mobile-demo" style="padding:0rem;">
+                <li style="text-align:center;padding:3rem;background:url('profile-bg.jpg') no-repeat;background-size:cover;">
+                    <img src="../profile.jpg" class="imageDoc" alt="">
+                    <a href="" class="logo-font" style="font-size:25px;color:#fff;margin-top:2rem;white-space:nowrap" ng-repeat="list in doc">{{list.name}}</a>
+                </li>
+                <li style="margin-top:1rem;" class="active"><a href="#/DPanel"><i class="material-icons left">insert_drive_file</i>My Profile</a></li>
+                <li><a href="#/docDB"><i class="material-icons left">timeline</i>Timeline</a></li>
+                <li><a href="#/docNew"><i class="material-icons left">folder_open</i>Add Records</a></li>
+                <li><a href="#/docPatient"><i class="material-icons left">local_hospital</i>My Patients</a></li>
+            </ul>
+        </div>
+    </nav>
+</div>
+
+<div class="container card" style="margin:0 auto;margin-top:3rem;margin-bottom:3rem;padding:0rem;" ng-repeat="list in doc">
+    <div class="above-wall">
+        <img src="../profile.jpg" alt="" class="imageDoc">
+        <h4 style="color:#fff;">{{list.name}}</h4>
+    </div>
+    <div class="row" style="margin:2rem;">
+        <div class="col s12 m6 l6" style="text-align:left;margin-top:2rem;">
+            <small>First Name</small>
+            <h6 style="color:#424242;font-size:20px;">{{list.name}}</h6>
+        </div>
+        <div class="col s12 m6 l6" style="text-align:left;margin-top:2rem;">
+            <small>Last Name</small>
+            <h6 style="color:#424242;font-size:20px;">{{list.name}}</h6>
+        </div>
+    </div>
+    <div class="row" style="margin:2rem;">
+        <div class="col s12 m6 l6" style="text-align:left;">
+            <small>Email</small>
+            <h6 style="color:#424242;font-size:20px;">{{list.email}}</h6>
+        </div>
+        <div class="col s12 m6 l6" style="text-align:left;">
+            <small>Mobile</small>
+            <h6 style="color:#424242;font-size:20px;">{{list.Phone}}</h6>
+        </div>
+    </div>
+    <div class="row" style="margin:2rem;">
+        <div class="col s12 m6 l6" style="text-align:left;">
+            <div style="text-align:left">
+                <small>Hospital</small>
+                <h6 style="color:#424242;font-size:20px;">{{list.Hospital}}</h6>
+            </div>
+        </div>
+        <div class="col s12 m6 l6" style="text-align:left;">
+            <small>Specialization</small>
+            <h6 style="color:#424242;font-size:20px;">{{list.Specialization}}</h6>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,199 @@
+<style>
+    /* label color */
+    
+    .input-field label {
+        color: #000;
+    }
+    /* label focus color */
+    
+    .input-field input[type=text]:focus+label {
+        color: #000 !important;
+    }
+    /* label underline focus color */
+    
+    .input-field input[type=text]:focus {
+        border-bottom: 1px solid #000 !important;
+        box-shadow: 0 1px 0 0 #000 !important;
+    }
+    
+    .input-field input[type=email]:focus {
+        border-bottom: 1px solid #000 !important;
+        box-shadow: 0 1px 0 0 #000 !important;
+    }
+    
+    .input-field input[type=number]:focus {
+        border-bottom: 1px solid #000 !important;
+        box-shadow: 0 1px 0 0 #000 !important;
+    }
+    /* valid color */
+    
+    .input-field input[type=text].valid {
+        border-bottom: 1px solid #000 !important;
+        box-shadow: 0 1px 0 0 #000 !important;
+    }
+    
+    .input-field input[type=number].valid {
+        border-bottom: 1px solid #000 !important;
+        box-shadow: 0 1px 0 0 #000 !important;
+    }
+    
+    .input-field input[type=email].valid {
+        border-bottom: 1px solid #000 !important;
+        box-shadow: 0 1px 0 0 #000 !important;
+    }
+    /* invalid color */
+    
+    .input-field input[type=text].invalid {
+        border-bottom: 1px solid #000 !important;
+        box-shadow: 0 1px 0 0 #000 !important;
+    }
+    
+    .input-field input[type=number].invalid {
+        border-bottom: 1px solid #000 !important;
+        box-shadow: 0 1px 0 0 #000 !important;
+    }
+    
+    .input-field input[type=email].invalid {
+        border-bottom: 1px solid #000 !important;
+        box-shadow: 0 1px 0 0 #000 !important;
+    }
+    /* icon prefix focus color */
+    
+    .input-field .prefix.active {
+        color: #000 !important;
+    }
+    
+    #adhar::placeholder {
+        color: #424242 !important;
+    }
+</style>
+
+<div class="navbar-fixed">
+    <nav style="background:#3F51B5">
+        <div class="nav-wrapper" style="padding-left: 1rem;padding-right: 1rem;">
+            <a href="#!" class="brand-logo" style="font-size:22px;">Medicos</a>
+            <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+            <ul class="right hide-on-med-and-down">
+                <li><a href="#/DPanel"><i class="material-icons left">insert_drive_file</i>My Profile</a></li>
+                <li><a href="#/docDB"><i class="material-icons left">work</i>Timeline</a></li>
+                <li class="active"><a href="#/docNew"><i class="material-icons left">track_changes</i>Add Records</a></li>
+                <li><a href="#/docPatient"><i class="material-icons left">euro_symbol</i>My Patients</a></li>
+            </ul>
+            <ul class="side-nav" id="mobile-demo" style="padding:0rem;">
+                <li style="text-align:center;padding:3rem;background:url('profile-bg.jpg') no-repeat;background-size:cover;">
+                    <img src="../profile.jpg" class="imageDoc" alt="">
+                    <a href="" class="logo-font" style="font-size:25px;color:#fff;margin-top:2rem;white-space:nowrap" ng-repeat="list in doc">{{list.name}}</a>
+                </li>
+                <li style="margin-top:1rem;"><a href="#/DPanel"><i class="material-icons left">insert_drive_file</i>My Profile</a></li>
+                <li><a href="#/docDB"><i class="material-icons left">timeline</i>Timeline</a></li>
+                <li class="active"><a href="#/docNew"><i class="material-icons left">folder_open</i>Add Records</a></li>
+                <li><a href="#/docPatient"><i class="material-icons left">local_hospital</i>My Patients</a></li>
+            </ul>
+        </div>
+    </nav>
+</div>
+
+<div class="container card" style="margin:0 auto;max-width:480px;margin-top:3rem;margin-bottom:3rem;padding:0rem;">
+    <div class="row" style="padding:2rem;">
+        <form class="col s12">
+            <div class="row">
+                <div class="input-field col s12">
+                    <input placeholder="Aadhar Number" id="adhar" type="text" class="validate">
+                    <label for="adhar">Aadhar Number</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s12">
+                    <input placeholder="Name" id="name" type="text" class="validate">
+                    <label for="name">Name</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s12">
+                    <input placeholder="Age" id="age" type="text" class="validate">
+                    <label for="age">Age</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s12">
+                    <input placeholder="Weight" id="weight" type="text" class="validate">
+                    <label for="weight">Weight</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s12">
+                    <textarea id="symptoms" class="materialize-textarea" placeholder="Symptoms...."></textarea>
+                    <label for="symptoms">Symptoms</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s12">
+                    <textarea id="medicines" class="materialize-textarea" placeholder="Medicines..."></textarea>
+                    <label for="medicines">Medicines</label>
+                </div>
+            </div>
+            <a href="" class="btn btn-primary" style="background:#3F51B5;text-align:center" ng-click="addItems()">Submit</a>
+    </div>
+    </form>
+</div>
+</div>
+
+
+<!-- <div class="my-navbar">
+    <a href="" style="flex-grow:1;text-align:center;padding-top:3px;" ng-click="navTrigger()"><i class="fa fa-list" style="color:#424242;margin:0 auto;text-align:center;font-size:20px;margin-top:0.8rem;"></i></a>
+    <a href="" style="" class="logo">Medicos</a>
+</div>
+<div class="side-nav" id="sideNav">
+    <a href="" class="sideNavClose" ng-click="sideNavClose()"><i class="fa fa-times" style="color:#ccc;margin:0 auto;text-align:center;font-size:20px;margin-top:0.8rem;"></i></a>
+    <div class="name-details">
+        <img src="../profile.jpg" class="imageDoc" alt="">
+        <h5 class="nameDoc" ng-repeat="list in doc">{{list.name}}</h5>
+    </div>
+    <div style="margin:0 auto;height:1px;background:#424242;opacity:.2;width:90%;margin-top:1.5rem;margin-bottom:1.5rem;"></div>
+    <div class="extra-options">
+        <a href="#/DPanel" class="links-items">My Profile</a>
+    </div>
+    <div class="extra-options">
+        <a href="#/docDB" class="links-items">Database</a>
+    </div>
+    <div class="extra-options">
+        <a href="#/docNew" class="links-items active">New item</a>
+    </div>
+
+    <div class="extra-options">
+        <a href="#/docPatient" class="links-items">My Patients</a>
+    </div>
+    <p class="brandName">Medicos</p>
+</div>
+
+<div class="main-content">
+    <div class="container">
+        <a href="" style="position:absolute;right:40px;top:60px;text-align:right;padding-top:3px;" onclick="parent.location='index.html'"><i class="fa fa-power-off" style="color:#424242;margin:0 auto;text-align:center;font-size:20px;margin-top:0.8rem;"></i></a>
+
+        <div style="padding-top:3rem;">
+            <form style="text-align:center;">
+                <h3>New Subscription!</h3>
+                <div class="form-group" style="margin-top:30px;">
+                    <input type="number" class="form-control" id="adhar" placeholder="Aadhar Number">
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control" id="name" placeholder="Name">
+                </div>
+                <div class="form-group">
+                    <input type="number" class="form-control" id="age" placeholder="Age">
+                </div>
+                <div class="form-group">
+                    <input type="number" class="form-control" id="weight" placeholder="Weight">
+                </div>
+                <div class="form-group">
+                    <textarea type="text" class="form-control" id="symptoms" placeholder="Symptoms"></textarea>
+                </div>
+                <div class="form-group">
+                    <textarea type="text" class="form-control" id="medicines" placeholder="Medicines"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary my-btn" style="" ng-click="addItems()">Submit</button>
+            </form>
+
+        </div>
+    </div>
+</div> -->

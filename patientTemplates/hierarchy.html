@@ -1,0 +1,44 @@
+<div class="footer-links">
+    <a href="#/subs" style="flex-grow:1;text-align:center"><i class="fa fa-list" style="color:#ccc;margin:0 auto;text-align:center;font-size:20px;margin-top:0.8rem;"></i></a>
+    <a href="#/report" style="flex-grow:1;text-align:center"><i class="fa fa-file" style="color:#ccc;margin:0 auto;text-align:center;font-size:20px;margin-top:0.8rem;"></i></a>
+    <a href="#/notifications" style="flex-grow:1;text-align:center"><i class="fa fa-bell" style="color:#ccc;margin:0 auto;text-align:center;font-size:20px;margin-top:0.8rem;"></i></a>
+    <a href="#/hierarchy" style="flex-grow:1;text-align:center"><i class="fa fa-home" style="color:#424242;margin:0 auto;text-align:center;font-size:20px;margin-top:0.8rem;"></i></a>
+</div>
+<a href="" class="add-relation" data-toggle="modal" data-target="#exampleModal">+</a>
+<div class="container">
+
+    <h3 style="margin-top:3rem;">My Family</h3>
+    <div style="width:90%;margin-top:2rem;margin-bottom:2rem;text-align:left;height:1px;background:#ccc;"></div>
+    <div class="family-mem" ng-repeat="list in relations" style="margin-top:2rem;">
+        <h5 style="flex-grow:1;text-align:left;">Aadhar Number:<strong style="font-weight:600">{{list.Number}}</strong></h5>
+        <h5 style="flex-grow:1;text-align:right;">Relation:<strong style="font-weight:600">{{list.Relation}}</strong></h5>
+    </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Add Relation!</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+                <form style="text-align:center;">
+                    <div class="form-group">
+                        <input type="number" class="form-control" id="adhar" placeholder="Aadhar Number">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="relation" placeholder="Relation">
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" ng-click="addRelations()">Save changes</button>
+            </div>
+        </div>
+    </div>
+</div>

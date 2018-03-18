@@ -1,0 +1,156 @@
+<style>
+    /* label color */
+    
+    .input-field label {
+        color: #000;
+    }
+    /* label focus color */
+    
+    .input-field input[type=text]:focus+label {
+        color: #000 !important;
+    }
+    /* label underline focus color */
+    
+    .input-field input[type=text]:focus {
+        border-bottom: 1px solid #000 !important;
+        box-shadow: 0 1px 0 0 #000 !important;
+    }
+    /* valid color */
+    
+    .input-field input[type=text].valid {
+        border-bottom: 1px solid #000 !important;
+        box-shadow: 0 1px 0 0 #000 !important;
+    }
+    /* invalid color */
+    
+    .input-field input[type=text].invalid {
+        border-bottom: 1px solid #000 !important;
+        box-shadow: 0 1px 0 0 #000 !important;
+    }
+    /* icon prefix focus color */
+    
+    .input-field .prefix.active {
+        color: #000 !important;
+    }
+    
+    #adhar::placeholder {
+        color: #424242 !important;
+    }
+</style>
+<div class="navbar-fixed">
+    <nav style="background:#3F51B5">
+        <div class="nav-wrapper" style="padding-left: 1rem;padding-right: 1rem;">
+            <a href="#!" class="brand-logo" style="font-size:22px;">Medicos</a>
+            <a href="" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+            <ul class="right hide-on-med-and-down">
+                <li><a href="#/DPanel"><i class="material-icons left">insert_drive_file</i>My Profile</a></li>
+                <li><a href="#/docDB"><i class="material-icons left">work</i>Timeline</a></li>
+                <li><a href="#/docNew"><i class="material-icons left">track_changes</i>Add Records</a></li>
+                <li class="active"><a href="#/docPatient"><i class="material-icons left">euro_symbol</i>My Patients</a></li>
+            </ul>
+            <ul class="side-nav" id="mobile-demo" style="padding:0rem;">
+                <li style="text-align:center;padding:3rem;background:url('profile-bg.jpg') no-repeat;background-size:cover;">
+                    <img src="../profile.jpg" class="imageDoc" alt="">
+                    <a href="" class="logo-font" style="font-size:25px;color:#fff;margin-top:2rem;white-space:nowrap" ng-repeat="list in doc">{{list.name}}</a>
+                </li>
+                <li style="margin-top:1rem;"><a href="#/DPanel"><i class="material-icons left">insert_drive_file</i>My Profile</a></li>
+                <li><a href="#/docDB"><i class="material-icons left">timeline</i>Timeline</a></li>
+                <li><a href="#/docNew"><i class="material-icons left">folder_open</i>Add Records</a></li>
+                <li class="active"><a href="#/docPatient"><i class="material-icons left">local_hospital</i>My Patients</a></li>
+            </ul>
+        </div>
+    </nav>
+</div>
+
+<div class="container" style="margin-top:2rem;">
+
+    <div class="">
+        <style>
+            #search::placeholder {
+                color: #000 !important;
+            }
+        </style>
+        <div class="input-field col s6" style="padding:0rem">
+            <input id="search" type="text" class="validate" ng-model="searchText">
+            <label for="last_name">Search</label>
+        </div>
+        <div ng-repeat="list in patientDoc | filter:searchText" style="padding:2rem;width:100%;margin:0 auto;text-align:left;background:#fff;border-radius:5px;border:solid 1px #ccc;">
+            <div>
+                <div style="display:flex">
+                    <p style="flex-grow:1"><i class="material-icons left">date_range</i>{{list.Date}}</p>
+                    <p style="flex-grow:1">Age: {{list.Age}} yrs</p>
+                    <p style="flex-grow:1"><i class="material-icons left">line_weight</i>{{list.Weight}} Kg</p>
+                    <p style="flex-grow:1"><i class="material-icons left">perm_identity</i>{{list.Name}}</p>
+                </div>
+                <div class="divider"></div>
+                <div class="sub-main-details">
+                    <h5 style="flex-grow:1;font-size:15px;margin-top:8px;">Hospital: <strong style="font-weight:600">St. James Hospital, Chalakudy</strong></h5>
+                    <h5 style="flex-grow:1;font-size:15px;margin-top:8px;">Symptoms: <strong style="font-weight:600">{{list.Symptoms}}</strong></h5>
+                    <h5 style="flex-grow:1;font-size:15px;margin-top:8px;">Medicines: <strong style="font-weight:600">{{list.Medicines}}</strong></h5>
+
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+
+
+<!-- <div class="my-navbar">
+    <a href="" style="flex-grow:1;text-align:center;padding-top:3px;" ng-click="navTrigger()"><i class="fa fa-list" style="color:#424242;margin:0 auto;text-align:center;font-size:20px;margin-top:0.8rem;"></i></a>
+    <a href="" style="" class="logo">Medicos</a>
+</div>
+<div class="side-nav" id="sideNav">
+    <a href="" class="sideNavClose" ng-click="sideNavClose()"><i class="fa fa-times" style="color:#ccc;margin:0 auto;text-align:center;font-size:20px;margin-top:0.8rem;"></i></a>
+    <div class="name-details">
+        <img src="../profile.jpg" class="imageDoc" alt="">
+        <h5 class="nameDoc" ng-repeat="list in doc">{{list.name}}</h5>
+    </div>
+    <div style="margin:0 auto;height:1px;background:#424242;opacity:.2;width:90%;margin-top:1.5rem;margin-bottom:1.5rem;"></div>
+    <div class="extra-options">
+        <a href="#/DPanel" class="links-items">My Profile</a>
+    </div>
+    <div class="extra-options">
+        <a href="#/docDB" class="links-items">Database</a>
+    </div>
+    <div class="extra-options">
+        <a href="#/docNew" class="links-items">New item</a>
+    </div>
+
+    <div class="extra-options">
+        <a href="#/docPatient" class="links-items active">My Patients</a>
+    </div>
+    <p class="brandName">Medicos</p>
+</div>
+
+<div class="main-content">
+    <a href="" style="position:absolute;right:40px;top:60px;text-align:right;padding-top:3px;" onclick="parent.location='index.html'"><i class="fa fa-power-off" style="color:#424242;margin:0 auto;text-align:center;font-size:20px;margin-top:0.8rem;"></i></a>
+    <div class="container" id="main">
+        <div>
+            <form style="text-align:center;">
+                <div class="form-group searchBar">
+                    <input type="text" class="form-control" ng-model="searchText" placeholder="Search here....!">
+                </div>
+            </form>
+            <div style="padding-top:3rem;">
+                <div class="subsciption" ng-repeat="list in patientDoc | filter:searchText">
+                    <div class="header-sub">
+                        <h5 style="flex-grow:1;font-size:15px;margin-top:8px;">Date: <strong style="font-weight:600">{{list.Date}}</strong></h5>
+                        <h5 style="flex-grow:1;font-size:15px;margin-top:8px;">Age: <strong style="font-weight:600">{{list.Age}}</strong></h5>
+                        <h5 style="flex-grow:1;font-size:15px;margin-top:8px;">weight: <strong style="font-weight:600">{{list.Weight}}</strong></h5>
+
+                    </div>
+                    <div class="sub-main-details">
+                        <h5 style="flex-grow:1;font-size:15px;margin-top:8px;">Hospital: <strong style="font-weight:600">St. James Hospital, Chalakudy</strong></h5>
+                        <h5 style="flex-grow:1;font-size:15px;margin-top:8px;">Symptoms: <strong style="font-weight:600">{{list.Symptoms}}</strong></h5>
+                        <h5 style="flex-grow:1;font-size:15px;margin-top:8px;">Medicines: <strong style="font-weight:600">{{list.Medicines}}</strong></h5>
+
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</div> -->

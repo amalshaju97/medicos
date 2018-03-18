@@ -1,0 +1,13 @@
+<div class="footer-links">
+    <a href="#/subs" style="flex-grow:1;text-align:center"><i class="fa fa-list" style="color:#ccc;margin:0 auto;text-align:center;font-size:20px;margin-top:0.8rem;"></i></a>
+    <a href="#/report" style="flex-grow:1;text-align:center"><i class="fa fa-file" style="color:#ccc;margin:0 auto;text-align:center;font-size:20px;margin-top:0.8rem;"></i></a>
+    <a href="#/notifications" style="flex-grow:1;text-align:center"><i class="fa fa-bell" style="color:#424242;margin:0 auto;text-align:center;font-size:20px;margin-top:0.8rem;"></i></a>
+    <a href="#/hierarchy" style="flex-grow:1;text-align:center"><i class="fa fa-home" style="color:#ccc;margin:0 auto;text-align:center;font-size:20px;margin-top:0.8rem;"></i></a>
+</div>
+
+<div class="container" style="padding-bottom:4rem;">
+    <div class="notifications" ng-repeat="list in notifications">
+        <h4>{{list.Title}}</h4>
+        <p style="color:#ccc;">{{list.Message}}</p>
+    </div>
+</div>
