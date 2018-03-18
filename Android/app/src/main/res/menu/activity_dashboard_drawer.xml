@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_timeline"
+            android:icon="@drawable/feed"
+            android:title="Timeline" />
+        <item
+            android:id="@+id/nav_profile"
+            android:icon="@drawable/user"
+            android:title="Profile" />
+        <item
+            android:id="@+id/nav_records"
+            android:icon="@drawable/moleskine"
+            android:title="ADD RECORDS" />
+        <item
+            android:id="@+id/nav_patients"
+            android:icon="@drawable/groups"
+            android:title="My Patients" />
+        <item
+            android:checkable="false"
+            android:enabled="false"
+            android:title="Medicos"
+
+            />
+    </group>
+
+</menu>

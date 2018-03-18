@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "912611634058",
+    "firebase_url": "https://onemedicos.firebaseio.com",
+    "project_id": "onemedicos",
+    "storage_bucket": "onemedicos.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:912611634058:android:9b2c93ade498c7c1",
+        "android_client_info": {
+          "package_name": "com.comcad.medicos"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "912611634058-juvie02ct1g0kf11aehlrm7ot5ecf30s.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyArtB5d0s7hFFjLg7mCAuzjtBy4Gehv6jE"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
